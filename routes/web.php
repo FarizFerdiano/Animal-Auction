@@ -22,7 +22,13 @@ Route::get('/register', function () {
 Route::get('/home', function () {
     return view('pages.page.home');
 });
+Route::get('/auctions', function () {
+    return view('pages.page.auctions');
+});
 Route::get('/detail', function () {
     return view('pages.page.detail');
+});
+Route::get('/mybid', function () {
+    return view('pages.page.mybid');
 });
 

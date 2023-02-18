@@ -32,8 +32,8 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
-            <h6 class="logo fw-large mb-4">
-              <i class=""></i>Animal Auction
+            <h6 class="logo fw-large mb-4 text-black">
+              Animal Auction
             </h6>
             <p>
                 Animal Auction adalah website lelang hewan yang terpercaya disini kami menyediakan platform untuk para peternak untuk melelang hewan peliharaannya.
@@ -44,13 +44,22 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              info@example.com
+            <h6 class="text-uppercase fw-bold mb-4">Ikuti kami</h6>
+            <p><img src="{{ asset('icons/feather_328D2A/instagram.svg') }}"> 
+              <a class="text-decoration-none text-muted" href="https://www.instagram.com/f_dyano/" target="_blank" rel="noopener noreferrer">
+                <span class="ms-1">animal_auction</span>
+              </a>
             </p>
-            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><img src="{{ asset('icons/feather_328D2A/facebook.svg') }}"> 
+              <a class="text-decoration-none text-muted" href="https://www.instagram.com/f_dyano/" target="_blank" rel="noopener noreferrer">
+                <span class="ms-1">animal_auction</span>
+              </a>
+            </p>
+            <p><img src="{{ asset('icons/feather_328D2A/twitter.svg') }}"> 
+              <a class="text-decoration-none text-muted" href="https://www.instagram.com/f_dyano/" target="_blank" rel="noopener noreferrer">
+                <span class="ms-1">animal_auction</span>
+              </a>
+            </p>
           </div>
         </div>
         <!-- Grid row -->

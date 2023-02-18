@@ -50,74 +50,82 @@
                           </div>
                             <button type="submit" class="col-12 col-md-4 btn btn-success btn-block text-light fw-bold">Masukan penawaran<img src=""></button>
                         </div>
-                    </div>
+                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
           {{-- History Auction --}}
-          <div class="history_lelang row d-flex mb-4 px-2 mb-5">
-            <div class="card shadow-sm">
-              <table class="table caption-top">
-                <h5 class="m-2">History Lelang</h5>
-                <thead class="text-success">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Bidder</th>
-                    <th scope="col">Watch</th>
-                    <th scope="col">Bid</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    {{-- Bidder --}}
-                    <td>Mark</td>
-                    {{-- Date Time --}}
-                    <td>06/11/2023  17:00:01 WIB</td>
-                    {{-- Bid --}}
-                    <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.2.000.000.00</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    {{-- Bidder --}}
-                    <td>Makmur</td>
-                    {{-- Date Time --}}
-                    <td>06/11/2023  17:00:01 WIB</td>
-                    {{-- Bid --}}
-                    <td><img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.1.000.000.00</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    {{-- Bidder --}}
-                    <td>Mark</td>
-                    {{-- Date Time --}}
-                    <td>06/11/2023  17:00:01 WIB</td>
-                    {{-- Bid --}}
-                    <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.000</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    {{-- Bidder --}}
-                    <td>Mark</td>
-                    {{-- Date Time --}}
-                    <td>06/11/2023  17:00:01 WIB</td>
-                    {{-- Bid --}}
-                    <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.000</span></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    {{-- Bidder --}}
-                    <td>Mark</td>
-                    {{-- Date Time --}}
-                    <td>06/11/2023  17:00:01 WIB</td>
-                    {{-- Bid --}}
-                    <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.000</span></td>
-                  </tr>
-                </tbody>
-              </table>
+          <section>
+            <div class="container">
+              <div class="history_lelang row d-flex mb-5">
+                <div class="card shadow-sm">
+                  <div class="table-responsive">
+
+                    <table class="table caption-top">
+                      <h5 class="m-2">Bidder Leaderboard</h5>
+                      <thead class="text-success">
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Bidder</th>
+                          <th scope="col">Time</th>
+                          <th scope="col">Bid</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          {{-- Bidder --}}
+                          <td>Mark</td>
+                          {{-- Date Time --}}
+                          <td>06/11/2023  17:00:01 WIB</td>
+                          {{-- Bid --}}
+                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.2.000.000.00</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          {{-- Bidder --}}
+                          <td>Makmur</td>
+                          {{-- Date Time --}}
+                          <td>06/11/2023  17:00:01 WIB</td>
+                          {{-- Bid --}}
+                          <td><img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.1.000.000.00</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          {{-- Bidder --}}
+                          <td>Mark</td>
+                          {{-- Date Time --}}
+                          <td>06/11/2023  17:00:01 WIB</td>
+                          {{-- Bid --}}
+                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.000</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          {{-- Bidder --}}
+                          <td>Mark</td>
+                          {{-- Date Time --}}
+                          <td>06/11/2023  17:00:01 WIB</td>
+                          {{-- Bid --}}
+                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.000</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">5</th>
+                          {{-- Bidder --}}
+                          <td>Mark</td>
+                          {{-- Date Time --}}
+                          <td>06/11/2023  17:00:01 WIB</td>
+                          {{-- Bid --}}
+                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.000</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
         </div>
     </section>
 @endsection
