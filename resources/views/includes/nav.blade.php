@@ -19,37 +19,37 @@
           <li class="nav-item">
             <a class="nav-link" href="/auctions">Auctions</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auctions">About</a>
+          </li>
+          
         </ul>
         {{-- right elements --}}
         <div class="d-flex align-items-center gap-3">
             {{-- Drop down --}}
             <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle d-sm-flex my-3 align-items-sm-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img
-                    src="{{ asset('icons/feather_328D2A/user icon.svg') }}"
+                    <img src="{{ asset('icons/feather_328D2A/user icon.svg') }}"
                       class="rounded-circle"
                       height="22"
                       alt="Black and White Portrait of a Man"
-                      loading="lazy"
-                      />
+                      loading="lazy"/>
                       <strong class="ms-2">Nama akun aripin</strong>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">
-                            <span class="ms-1">
+                            <span class="ml-1">
                                 Logout 
                             </span>
-                            <img src="{{ asset('icons/feather_328D2A/.svg') }}">
+                            <img src="{{ asset('icons/feather_328D2A/log-out.svg') }}">
                             </a>
                         </li>
                     </ul>
                 </div>
                 {{-- Mybid Button --}}
-                <a href="/mybid">
-                    <button type=""
+                <a href="/mybid"
                     class="mybid_button btn btn-warning text-bg-warning btn-block text-warning  fw-bold">
                     <img src="{{ asset('icons/feather_E88D13/coin-stack.svg') }}"><span class="ms-2">My Bid</span>
-                    </button>
                 </a>
       </div>
 

@@ -9,19 +9,23 @@
         <div class="Headline_home text-light d-flex justify-content text-align-left py-3">
             <h1 class="H1_ijo">Auctions</h1>
         </div>
-        {{-- <div class="browese"> --}}
-            {{-- <button type="submit" class="btn btn-outline-success btn-block fw-bold">
+        <div class="browese">
+            <a href="/home" class="btn btn-outline-success btn-block fw-bold">
                 Back Home<img src="">
-            </button> --}}
+            </a>
         </div>
     </div>
 </div>
-{{-- Serch --}}
+{{-- Search --}}
 <div class="container">
-    <div class="card bg-transparent p-1 my-3 mb-4">
+    <div class="card bg-success-subtle border-success p-1 my-3 mb-4">
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Cari Hewan lelang yang anda inginkan" aria-label="Search">
-            <button class="btn btn-success" type="submit">Search</button>
+            <a href="#" class="btn btn-success d-flex" type="submit"><img src="{{ asset('icons/feather_FFFFFF/search.svg') }}">
+                <span class="ms-1">
+                    Search
+                </span>
+            </a>
         </form>
     </div>
 </div>

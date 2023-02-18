@@ -21,7 +21,7 @@
                         <span class="ms-1">1 hari</span>
                       </div>
                       {{-- alert Bid --}}
-                      <div class=" fw-bold"><img clas="waktu_auction mb-2" src="{{ asset('icons/feather_FF1221/tabler_hammer.svg') }}">
+                      <div class="fw-bold"><img clas="waktu_auction mb-2" src="{{ asset('icons/feather_FF1221/tabler_hammer.svg') }}">
                         <span class="ms-1 text-danger">Bid saat ini</span>
                       </div>
                       {{-- Harga Bid --}}
@@ -29,8 +29,10 @@
                       {{-- ID Barang --}}
                       <p class="id_barang fw-semibold mb-3">ID 12345</p>
                       {{-- Nama pemilik --}}
-                      <div class="fw-bold mb-2"> <img clas="" src="{{ asset('icons/feather_328D2A/user icon.svg') }}">
-                        <span class="ms-1">Nama Pemilik</span></div>
+                      <div class="fw-bold mb-2"> 
+                        <img clas="" src="{{ asset('icons/feather_328D2A/user icon.svg') }}">
+                        <span class="ms-1">Nama Pemilik</span>
+                      </div>
                       {{-- Desc produk--}}
                       {{-- Headline --}}
                         <p class="informasi_produk fw-semibold mb-1 card-text fs-6">Informasi Produk</p>
@@ -48,7 +50,7 @@
                             <span class="input-group-text">Rp</span>
                             <input type="number" placeholder="000" class="form-control">
                           </div>
-                            <button type="submit" class="col-12 col-md-4 btn btn-success btn-block text-light fw-bold">Masukan penawaran<img src=""></button>
+                            <a href="#" class="col-12 col-md-4 btn btn-success btn-block text-light fw-bold">Masukan penawaran<img src=""></a>
                         </div>
                      </div>
                   </div>
@@ -62,7 +64,6 @@
               <div class="history_lelang row d-flex mb-5">
                 <div class="card shadow-sm">
                   <div class="table-responsive">
-
                     <table class="table caption-top">
                       <h5 class="m-2">Bidder Leaderboard</h5>
                       <thead class="text-success">
@@ -81,7 +82,9 @@
                           {{-- Date Time --}}
                           <td>06/11/2023  17:00:01 WIB</td>
                           {{-- Bid --}}
-                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.2.000.000.00</span></td>
+                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
+                            <span class="ms-1">RP.2.000.000.00</span>
+                          </td>
                         </tr>
                         <tr>
                           <th scope="row">2</th>
@@ -90,7 +93,9 @@
                           {{-- Date Time --}}
                           <td>06/11/2023  17:00:01 WIB</td>
                           {{-- Bid --}}
-                          <td><img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.1.000.000.00</span></td>
+                          <td><img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
+                            <span class="ms-1">RP.1.000.000.00</span>
+                          </td>
                         </tr>
                         <tr>
                           <th scope="row">3</th>
@@ -99,7 +104,9 @@
                           {{-- Date Time --}}
                           <td>06/11/2023  17:00:01 WIB</td>
                           {{-- Bid --}}
-                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.000</span></td>
+                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
+                            <span class="ms-1">RP.000</span>
+                          </td>
                         </tr>
                         <tr>
                           <th scope="row">4</th>
@@ -108,7 +115,9 @@
                           {{-- Date Time --}}
                           <td>06/11/2023  17:00:01 WIB</td>
                           {{-- Bid --}}
-                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.000</span></td>
+                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
+                            <span class="ms-1">RP.000</span>
+                          </td>
                         </tr>
                         <tr>
                           <th scope="row">5</th>
@@ -117,7 +126,9 @@
                           {{-- Date Time --}}
                           <td>06/11/2023  17:00:01 WIB</td>
                           {{-- Bid --}}
-                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}"><span class="ms-1">RP.000</span></td>
+                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
+                            <span class="ms-1">RP.000</span>
+                          </td>
                         </tr>
                       </tbody>
                     </table>

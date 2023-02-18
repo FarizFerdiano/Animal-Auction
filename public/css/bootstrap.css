@@ -6877,7 +6877,7 @@ textarea.form-control-lg {
 
 .text-bg-success {
   color: #fff !important;
-  background-color: RGBA(25, 135, 84, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(221, 255, 219, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-info {
@@ -6892,7 +6892,7 @@ textarea.form-control-lg {
 
 .text-bg-danger {
   color: #fff !important;
-  background-color: RGBA(220, 53, 69, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(255, 185, 189, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-light {

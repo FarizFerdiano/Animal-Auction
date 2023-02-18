@@ -37,11 +37,9 @@
           <h1 class="text-start H1_ijo">Lelang yang berlangsung</h1>
       </div>
       <div class="browese">
-        <a href="/auctions">
-          <button type="submit" class="btn btn-outline-success btn-block fw-bold">
+          <a href="auctions" class="btn btn-outline-success btn-block fw-bold">
               Browse More<img src="">
-          </button>
-        </a>
+          </a>
       </div>
   </div>
 </div>

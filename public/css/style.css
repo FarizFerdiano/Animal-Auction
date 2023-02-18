@@ -14,7 +14,20 @@ body {
 .logo {
     font-family: 'Alfa Slab One';
 }
-
+/* h1 {
+    font-size: 3em;
+}
+p {
+    font-size: 1.5rem;
+}
+@media (max-width:8px) {
+    h5 {
+        font-size: calc(1vw + 1.5rem);
+    }
+    p {
+        font-size: calc(2vw + 1rem);
+    }
+} */
 .Headline {
     font-family: 'Alfa Slab One';
     font-style: normal;
