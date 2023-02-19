@@ -75,8 +75,8 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th scope="row">1</th>
+                        <tr class="table-active">
+                          <th scope="row ">1</th>
                           {{-- Bidder --}}
                           <td>Mark</td>
                           {{-- Date Time --}}
@@ -104,7 +104,7 @@
                           {{-- Date Time --}}
                           <td>06/11/2023  17:00:01 WIB</td>
                           {{-- Bid --}}
-                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
+                          <td><img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
                             <span class="ms-1">RP.000</span>
                           </td>
                         </tr>
@@ -115,7 +115,7 @@
                           {{-- Date Time --}}
                           <td>06/11/2023  17:00:01 WIB</td>
                           {{-- Bid --}}
-                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
+                          <td><img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
                             <span class="ms-1">RP.000</span>
                           </td>
                         </tr>
@@ -126,7 +126,7 @@
                           {{-- Date Time --}}
                           <td>06/11/2023  17:00:01 WIB</td>
                           {{-- Bid --}}
-                          <td> <img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
+                          <td><img clas="" src="{{ asset('icons/feather_328D2A/ph_money.svg') }}">
                             <span class="ms-1">RP.000</span>
                           </td>
                         </tr>

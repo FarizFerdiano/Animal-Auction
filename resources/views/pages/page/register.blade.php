@@ -10,10 +10,10 @@
   </div>
     
   {{-- <!-- Register card --> --}}
-  <section class="justify-content-center p-2">
+  <section class="justify-content-center d-flex ">
         <div class="col-lg-6 mb-1">
-          <div class="card shadow-sm">
-            <div class="card-body">
+          <div class="card shadow-sm mb-5 ">
+            <div class="card-body ">
               <form>
                 {{-- <!-- Name input --> --}}
                 <div class="form-floating mb-2">
