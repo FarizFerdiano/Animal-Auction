@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted border-top">
+<footer class="text-center text-lg-start bg-light text-muted border-top w-100 position-static bottom-0">
       <!-- Right -->
       <div>
         <a href="" class="me-4 text-reset">
@@ -38,13 +38,17 @@
             <p>
                 Animal Auction adalah website lelang hewan yang terpercaya disini kami menyediakan platform untuk para peternak untuk melelang hewan peliharaannya.
             </p>
+            <div class="text-left">
+              © 2023 Copyright:
+              <a class="text-reset fw-bold" href="https://.com/">Fariz Ferdiano</a>
+            </div>
           </div>
           <!-- Grid column -->
   
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Ikuti kami</h6>
+            <h6 class="text-black fw-bold mb-4">Ikuti kami</h6>
             <p><img src="{{ asset('icons/feather_328D2A/instagram.svg') }}"> 
               <a class="text-decoration-none text-muted" href="https://www.instagram.com/f_dyano/" target="_blank" rel="noopener noreferrer">
                 <span class="ms-1">animal_auction</span>
@@ -65,13 +69,5 @@
         <!-- Grid row -->
       </div>
     </section>
-    <!-- Section: Links  -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2023 Copyright:
-      <a class="text-reset fw-bold" href="https://.com/">Fariz Ferdiano</a>
-    </div>
-    <!-- Copyright -->
   </footer>
   <!-- Footer -->

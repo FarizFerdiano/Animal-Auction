@@ -37,7 +37,7 @@
                       <strong class="ms-2">Nama akun aripin</strong>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">
+                        <li><a class="dropdown-item" href="../login">
                             <span class="ml-1">
                                 Logout 
                             </span>
@@ -49,7 +49,8 @@
                 {{-- Mybid Button --}}
                 <a href="/mybid"
                     class="mybid_button btn btn-warning text-bg-warning btn-block text-warning  fw-bold">
-                    <img src="{{ asset('icons/feather_E88D13/coin-stack.svg') }}"><span class="ms-2">My Bid</span>
+                    <img src="{{ asset('icons/feather_E88D13/coin-stack.svg') }}">
+                    <span class="ms-2">My Bid</span>
                 </a>
       </div>
 

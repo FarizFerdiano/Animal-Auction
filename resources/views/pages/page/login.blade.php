@@ -43,12 +43,13 @@
                       {{-- <!-- Login & Sign button --> --}}
                       <div class="container p-0">
                           <div class="d-flex w-100 gap-2 flex-column flex-md-row">
-                              <button type="login"
+                              <a href="/home"
                                   class="col-12 col-md-6 btn btn-success btn-block text-light py-3 fw-bold">
                                   <span class="ms-2">Login</span> 
                                   <img src="{{ asset('icons/feather_white/log-in.svg') }}">
-                              </button>
-                              <button type="regis" class="col-12  col-md-6 btn btn-outline-success py-3 fw-bold">Registrasi</button>
+                              </a>
+                              
+                                <a href="/register" class="col-12  col-md-6 btn btn-outline-success py-3 fw-bold">Registrasi</a>
                           </div>
                       </div>
                   </form>

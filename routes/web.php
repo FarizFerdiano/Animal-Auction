@@ -31,4 +31,7 @@ Route::get('/detail', function () {
 Route::get('/mybid', function () {
     return view('pages.page.mybid');
 });
+Route::get('/noneauction', function () {
+    return view('pages.page.noneauction');
+});
 
