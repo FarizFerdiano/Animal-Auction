@@ -70,7 +70,7 @@
                 <span class="ms-1 text-danger">Bid saat ini</span>
               </div>
               <span class="card-text text-truncate fw-bold fs-5">
-                @if ($auction->bid->max('bid_amount') != null)
+                @if ($auction->bid->count())
                   @rupiah($auction->bid->max('bid_amount'))
                 @else
                   @rupiah($auction->item->start_price)

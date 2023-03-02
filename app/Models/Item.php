@@ -26,14 +26,19 @@ class Item extends Model
     // }
 
 
-    public function bids()
-    {
-        return $this->hasMany(Bid::class);
-    }
+    // public function bids()
+    // {
+    //     return $this->hasMany(Bid::class);
+    // }
 
-    public function winner()
+    // public function winner()
+
+    // protected $with = ['auction'];
+    //$with auction fail
+    public function auction()
     {
-        return $this->belongsTo(User::class, 'winner_id');
+        // return $this->belongsTo(User::class, 'winner_id');
+        return $this->hasOne(Auction::class);
     }
 
 }

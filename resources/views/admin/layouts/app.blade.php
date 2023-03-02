@@ -7,7 +7,7 @@
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>Dashboard - GoBid</title>
+  <title>Dashboard - Animal Auction</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -42,8 +42,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="/" class="logo d-flex align-items-center">
-        <img src="/assets/img/GoBid.svg" alt="GoBid">
-        {{-- <span class="d-none d-lg-block">GoBid</span> --}}
+        <img src="/assets/img/Logo_Animal_Auction.png" alt="AnimalAuction">
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->

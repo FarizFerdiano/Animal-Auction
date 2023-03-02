@@ -1848,7 +1848,7 @@ progress {
   --bs-table-striped-color: var(--bs-body-color);
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
   --bs-table-active-color: var(--bs-body-color);
-  --bs-table-active-bg: #E6E7FF;
+  --bs-table-active-bg: #DDFFDB;
   --bs-table-hover-color: var(--bs-body-color);
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
