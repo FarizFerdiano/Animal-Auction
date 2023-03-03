@@ -9,7 +9,7 @@
 
       <div class="pb-3">
         
-        <a href="#" class="btn bg-primary text-light button-create">Create Admin</a>
+        <a href="#" class="btn bg-success text-light button-create">Create Admin</a>
       </div>
 
       <table id="tablePengguna" class="display">

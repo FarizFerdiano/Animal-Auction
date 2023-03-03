@@ -59,7 +59,7 @@ body {
     }
 }
 
-.truncates {
+.text-truncates {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

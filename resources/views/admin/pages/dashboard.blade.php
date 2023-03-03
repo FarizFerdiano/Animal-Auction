@@ -24,7 +24,8 @@
           </div>
 
         </div>
-      </div><!-- End Lelang Card -->
+      </div>
+      <!-- End Lelang Card -->
 
       <!-- Penggunars Card -->
       <div class="col-sm-6 col-md-4">
@@ -47,7 +48,8 @@
           </div>
         </div>
 
-      </div><!-- End Pengguna Card -->
+      </div>
+      <!-- End Pengguna Card -->
 
       <!-- Tertinggi Card -->
       <div class="col-sm-12 col-md-4">
@@ -68,11 +70,11 @@
           </div>
 
         </div>
-      </div><!-- End Tertinggi Card -->
-
-      
+      </div>
+      <!-- End Tertinggi Card -->
     </div>
-  </div><!-- End columns -->
+  </div>
+  <!-- End columns -->
   
   <!-- Penawaran Terbaru -->
   <div class="col-lg-12">
@@ -103,6 +105,7 @@
       </div>
 
     </div>
-  </div><!-- End Top Selling -->
+  </div>
+  <!-- End Top Selling -->
 </div>
 @endsection

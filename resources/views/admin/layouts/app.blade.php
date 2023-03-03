@@ -7,7 +7,7 @@
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>Dashboard - Animal Auction</title>
+  <title>{{ $title }} - Animal Auction</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -40,13 +40,13 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
+    <!-- End Logo -->
     <div class="d-flex align-items-center justify-content-between">
       <a href="/" class="logo d-flex align-items-center">
-        <img src="/assets/img/Logo_Animal_Auction.png" alt="AnimalAuction">
+        <img src="/assets/img/Logo_Animal_2.png" alt="AnimalAuction">
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo -->
-
+    </div>
+    
     {{-- Account --}}
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
@@ -55,7 +55,7 @@
             <iconify-icon icon="mdi:user-circle" style="color: #000000;" width="30"></iconify-icon>
             <span class="d-none d-md-block dropdown-toggle ps-1">{{ Auth::user()->name }}</span>
           </a><!-- End Profile Iamge Icon -->
-
+          
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>{{ Auth::user()->name }}</h6>
@@ -74,8 +74,9 @@
               </form>
             </li>
           </ul><!-- End Profile Dropdown Items -->
+          
         </li><!-- End Profile Nav -->
-
+        <i class="bi bi-list toggle-sidebar-btn p-2"></i>
       </ul>
     </nav><!-- End Icons Navigation -->
 
@@ -88,13 +89,16 @@
 
     <div class="pagetitle">
       <h1>Dashboard</h1>
-      <nav>
+      {{-- <h1>Dashboard</h1> --}}
+      <h1>{{ $title }}</h1>
+      {{-- <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item active">Dashboard</li>
         </ol>
-      </nav>
-    </div><!-- End Page Title -->
+      </nav> --}}
+    </div>
+    <!-- End Page Title -->
 
     <section class="section dashboard">
       @yield('content')

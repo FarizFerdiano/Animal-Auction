@@ -20,7 +20,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link {{ (request()->is('admin/staffs')) ? '' : 'collapsed' }}" href="{{ route('dashboard-staff') }}">
+      <a class="nav-link {{ (request()->is('admin/members')) ? '' : 'collapsed' }}" href="{{ route('dashboard-users') }}">
         {{-- <i class="bi bi-person-vcard"></i> --}}
         <i class="bi bi-person-gear"></i>
         <span>Staffs</span>
