@@ -42,7 +42,13 @@
 
             {{-- Current bid --}}
             <div class="fw-bold"><img clas="waktu_auction mb-2" src="{{ asset('assets/icons/feather_FF1221/tabler_hammer.svg') }}">
-              <span class="ms-1 text-danger">Bid saat ini</span>
+              <span class="ms-1 text-danger">
+                @if($auction->status == 'open')
+                Current Bid
+                @else
+                Final Bid
+                @endif
+              </span>
             </div>
             <p class="fw-bold fs-4 mb-2">
               @if ($bids->count())
@@ -60,21 +66,33 @@
             @switch($auction->status)
             @case('open')
               <h5 class="fw-semibold fs-3 mb-3">Bid Now</h5>
-              <form action="#" method="POST">
+              {{-- Alert --}}
+              @if (session()->has('success'))
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              @endif
+              @error('bid_amount')
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ $message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              @enderror
+
+              <form action="{{ route('auction-store',$auction) }}" method="POST">
                 @csrf
                 <div class="input-group input-group-lg">
                   <span class="input-group-text">Rp</span>
                 @auth
                   @can('Member')
-                  <input type="number" placeholder="Enter your bid amount" class="form-control">
-                  <button type="submit" class="btn btn-success text-light fw-semibold">Submit Bid</button>
+                  <input type="number" name="bid_amount" placeholder="Enter your bid amount" class="form-control">
+                  <button type="submit" class="btn btn-success text-light fw-semibold" value="{{ old('bid_amount') }}">Submit Bid</button>
                   @else
-                  <input type="number" placeholder="You're not allowed to join this auction" class="form-control text-center" disabled>
-                  <button type="submit" class="btn btn-success text-light fw-semibold" disabled>Submit Bid</button>
+                  <input type="number" name="bid_amount" placeholder="You're not allowed to join this auction" class="form-control text-center" disabled><button type="submit" class="btn btn-success text-light fw-semibold" disabled>Submit Bid</button>
                   @endcan
                 @else
-                  <input type="number" placeholder="You need to login first" class="form-control text-center" disabled>
-                  <button type="submit" class="btn btn-success text-light fw-semibold" disabled>Submit Bid</button>
+                <input type="number" name="bid_amount" placeholder="You need to login first" class="form-control text-center" disabled>
                 @endauth
                 </div>
               </form>

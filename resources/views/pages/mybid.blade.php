@@ -30,10 +30,10 @@
                             <thead>
                                 <tr>
                                     <th class="fw-semibold" style="width: 7.5%">ID</th>
-                                    <th class="fw-semibold" style="width: 35%">Auction</th>
-                                    <th class="fw-semibold" style="width: 20%">Bid Amount</th>
+                                    <th class="fw-semibold" style="width: ">Auction</th>
+                                    <th class="fw-semibold" style="width: 15%">Bid Amount</th>
                                     <th class="fw-semibold" style="width: 20%">Bid Time</th>
-                                    <th class="fw-semibold" style="width: ">Result</th>
+                                    <th class="fw-semibold" style="width: 15%">Result</th>
                                 </tr>
                             </thead>
                             <tbody class="fw-medium">
@@ -54,28 +54,22 @@
                                     <td>
                                         @switch($bid->result)
                                         @case('ongoing')
-                                            <div class="badge bg-warning text-white px-3">
-                                                <div class="d-flex align-items-center fw-medium fs-6">
-                                                    <iconify-icon icon="ic:outline-access-time" style="color: white;" height="22"></iconify-icon>
-                                                    <span class="ms-1">Ongoing</span>
-                                                </div>
+                                            <div class="time-auction col-sm badge text-bg-warning text-warning my-2 fw-bold">
+                                                <img src="{{ asset('assets/icons/feather_FFB800/clock.svg') }}">
+                                                <span class="ms-1">Ongoing</span>
                                             </div>
                                             @break
                                         @case('win')
-                                            <div class="badge bg-primary text-white px-3">
-                                                <div class="d-flex align-items-center fw-medium fs-6">
-                                                    <iconify-icon icon="fluent:gavel-24-regular" style="color: white;" height="22"></iconify-icon>
-                                                    <span class="ms-1">Win</span>
-                                                </div>
+                                            <div class="time-auction col-sm badge text-bg-success text-success my-2 fw-bold">
+                                                <img src="{{ asset('assets/icons/feather_20_328D2A/mingcute_auction.svg') }}">
+                                                <span class="ms-1">Win</span>
                                             </div>
                                             @break
                                         @case('lose')
-                                            <div class="badge bg-danger text-white px-3">
-                                                <div class="d-flex align-items-center fw-medium fs-6">
-                                                    <iconify-icon icon="fluent:gavel-24-regular" style="color: white;" height="22"></iconify-icon>
-                                                    <span class="ms-1">Lose</span>
-                                                </div>
-                                            </div>
+                                        <div class="time-auction col-sm badge text-bg-danger text-danger my-2 fw-bold">
+                                            <img src="{{ asset('assets/icons/feather_FF1221/mingcute_auction.svg') }}">
+                                            <span class="ms-1">Lose</span>
+                                          </div>
                                         @break
                                         @endswitch
                                     </td>
