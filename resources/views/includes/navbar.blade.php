@@ -16,9 +16,11 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
+        @auth
         <li class="nav-item">
           <a class="nav-link" href="/auctions">Auctions</a>
         </li>
+        @endauth
       </ul>
       {{-- right elements --}}
       <div class="d-flex align-items-center gap-3">
