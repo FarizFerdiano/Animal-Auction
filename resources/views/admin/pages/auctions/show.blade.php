@@ -33,25 +33,32 @@
         {{-- Info --}}
         <div class="col-12 col-md-9 d-flex ps-4">
           <div class="card-body p-0">
-            <h5 class="card-title fw-bold fs-3 mb-2">{{ $auction->item->name }}</h5>
-            
+            <h5 class="card-title fw-bold fs-3">{{ $auction->item->name }}</h5>
             {{-- Status --}}
             @switch($auction->status)
-              @case('open')
-                <div class="badge bg-warning fw-normal fs-6 mb-2">Ongoing</div>
+            @case('open')
+            <div class="time-auction col-sm badge text-bg-warning text-light mb-1 fw-bold">
+              <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
+              <span class="ms-1">Ongoing</span>
+            </div>
+            @break
+            @case('close')
+            <div class="time-auction col-sm badge text-bg-secondary text-light mb-1 fw-bold">
+                <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
+                <span class="ms-1">Closed</span>
+              </div>
                 @break
-              @case('close')
-                <div class="badge bg-success fw-normal fs-6 mb-2">Closed</div>
-                @break
-              @case('failed')
-                <div class="badge bg-danger fw-normal fs-6 mb-2">Failed</div>  
-                @break
+            @case('failed')
+            <div class="time-auction col-sm badge text-bg-danger text-light mb-1 fw-bold">
+              <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
+              <span class="ms-1">failed</span>
+            </div>    
+            @break
             @endswitch
         
             {{-- Current bid --}}
-            <div class="d-flex align-items-center">
-              <iconify-icon icon="icon-park:gavel" width="32" flip="horizontal"></iconify-icon>
-              <span class="ms-1 text-black-50 fw-semibold">Current Bid</span>
+            <div class="fw-bold"><img clas="waktu_auction mb-2" src="{{ asset('assets/icons/feather_FF1221/tabler_hammer.svg') }}">
+              <span class="ms-1 text-danger">Bid saat ini</span>
             </div>
             <p class="fw-bold fs-4 mb-2">
               @if ($bids->count())
@@ -94,7 +101,7 @@
 
               {{-- Edit Item --}}
               @endif
-              <a class="btn btn-primary" href="{{ route('items.edit', $auction->item) }}">
+              <a class="btn btn-success" href="{{ route('items.edit', $auction->item) }}">
                   <i class="bi bi-box-seam"></i>
                   Edit Item
               </a>
@@ -106,7 +113,7 @@
                   {{-- Close --}}
                   @case('open')
                     <input type="hidden" name="status" value="open">
-                    <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure want to end this auction? After closing this auction cannot receive any bids.')">
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure want to end this auction? After closing this auction cannot receive any bids.')">
                       <i class="bi bi-x-lg"></i>
                       End
                     </button>

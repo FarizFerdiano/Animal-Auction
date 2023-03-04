@@ -34,31 +34,31 @@
                 style="height: 200px; object-fit: cover"/>
           <div class="card-body flex-column p-2 pt-1">
 
-          {{-- ID --}}
-          <p class="fw-semibold mb-0" style="font-size: 12px">
-            ID {{ $auction->id }}
-          </p>
-          {{-- Status --}}
+            {{-- Status --}}
             @switch($auction->status)
             @case('open')
-              <div class="time-auction col-sm badge text-bg-warning text-light my-2 fw-bold">
-                <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
-                <span class="ms-1">Ongoing</span>
-              </div>
-                @break
+            <div class="time-auction col-sm badge text-bg-warning text-light my-2 fw-bold">
+              <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
+              <span class="ms-1">Ongoing</span>
+            </div>
+            @break
             @case('close')
-              <div class="time-auction col-sm badge text-bg-secondary text-light my-2 fw-bold">
+            <div class="time-auction col-sm badge text-bg-secondary text-light my-2 fw-bold">
                 <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
                 <span class="ms-1">Closed</span>
               </div>
                 @break
             @case('failed')
-              <div class="time-auction col-sm badge text-bg-danger text-light my-2 fw-bold">
-                <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
-                <span class="ms-1">failed</span>
-              </div>    
-                  @break
+            <div class="time-auction col-sm badge text-bg-danger text-light my-2 fw-bold">
+              <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
+              <span class="ms-1">failed</span>
+            </div>    
+            @break
             @endswitch
+            {{-- ID --}}
+            <p class="fw-semibold mb-0" style="font-size: 12px">
+              ID {{ $auction->id }}
+            </p>
             {{-- Name --}}
             <p class="fw-medium mb-0 truncate" style="height: 48px" title="{{ $auction->item->name }}">
               {{ $auction->item->name }}
