@@ -26,7 +26,7 @@
 @if ($auctions->count())
 <section>
   <div class="container">
-    <div class="row row-cols-2 justify-content-start g-3 mb-3">
+    <div class="row row-cols-2 justify-content-start g-3 mb-3 mb-5">
       @foreach ($auctions as $auction)
       <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
         <a class="card shadow-sm w-100 col text-decoration-none text-black" href="/auction/{{ $auction->id }}" title="{{ $auction->item->name }}">
@@ -46,7 +46,6 @@
                 <img src="{{ asset('assets/icons/feather_FF1221/mingcute_auction.svg') }}">
                 <span class="ms-1">Closed</span>
               </div>
-                <div class="badge bg-danger fw-normal">Closed</div>
             @endswitch
             {{-- Name --}}
             <p class="truncate card-title fw-medium mb-1 fs-5">

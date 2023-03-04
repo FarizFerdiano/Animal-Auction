@@ -101,7 +101,7 @@
       <h2 class="text-start H1_ijo">Lelang yang berlangsung</h2>
     </div>
 
-    <div class="row row-cols-2 justify-content-start g-3 mb-4">
+    <div class="row row-cols-2 justify-content-start g-3 mb-5">
       @foreach ($auctions as $auction)
       <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
         <a class="card shadow-sm w-100 col text-decoration-none text-black" href="/auction/{{ $auction->id }}" title="{{ $auction->item->name }}">
