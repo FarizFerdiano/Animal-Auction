@@ -8,7 +8,7 @@
 
       <div class="pb-3">
         
-        <a href="#" class="btn bg-primary text-light button-create">Add new staff</a>>
+        <a href="#" class="btn bg-success text-light button-create">Add new staff</a>
       </div>
 
       <table id="tablePengguna" class="display">

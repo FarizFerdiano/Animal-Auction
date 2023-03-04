@@ -19,22 +19,21 @@
     </li>
 
     <li class="nav-heading">Master Data</li>
-
     <li class="nav-item">
-      <a class="nav-link {{ (request()->is('admin/users')) ? '' : 'collapsed' }}" href="{{ route('dashboard-users') }}">
+      <a class="nav-link {{ (request()->is('admin/members')) ? '' : 'collapsed' }}" href="{{ route('dashboard-users') }}">
         <i class="bi bi-people"></i>
         <span>Members</span>
       </a>
     </li>
-
+    @can('Admin')
     <li class="nav-item">
-      <a class="nav-link {{ (request()->is('admin/members')) ? '' : 'collapsed' }}" href="{{ route('dashboard-users') }}">
+      <a class="nav-link {{ (request()->is('admin/staffs')) ? '' : 'collapsed' }}" href="{{ route('dashboard-staff') }}">
         {{-- <i class="bi bi-person-vcard"></i> --}}
         <i class="bi bi-person-gear"></i>
         <span>Staffs</span>
       </a>
     </li>
-
+    @endcan
     <li class="nav-item">
       <a class="nav-link {{ (request()->is('admin/items', 'admin/items/*')) ? '' : 'collapsed' }}" href="{{ route('items.index') }}">
         <i class="bi bi-box-seam"></i>
@@ -42,28 +41,28 @@
       </a>
     </li>
 
+    
     <li class="nav-heading">Auctions</li>
-
+    @can('Staff')
     <li class="nav-item">
-      <a class="nav-link {{ (request()->is('admin/auctions', 'admin/auctions/*')) ? '' : 'collapsed' }}" href="#">
+      <a class="nav-link {{ (request()->is('admin/auctions', 'admin/auctions/*')) ? '' : 'collapsed' }}" href="{{ route('auctions.index') }}">
         <i class="bi bi-menu-button-wide"></i>
-        <span>Auctions</span>
+        <span>Manage Auctions</span>
       </a>
     </li>
-
+    @endcan
     <li class="nav-item">
-      <a class="nav-link {{ (request()->is('admin/auctions', 'admin/report/*')) ? '' : 'collapsed' }}" href="#">
+      <a class="nav-link {{ (request()->is('admin/report', 'admin/report/*')) ? '' : 'collapsed' }}" href="#">
         <i class="bi bi-printer"></i>
-        <span>Auction Report</span>
+        <span>Generate Report</span>
       </a>
     </li>
 
     <li class="nav-heading">Log</li>
-
     <li class="nav-item">
       <form action="{{ route('logout') }}" method="POST">
         @csrf
-        <button type="submit" class="nav-link collapsed btn-block border-0 bg-transparent">
+        <button type="submit" class="nav-link collapsed border-0 bg-transparent">
           <i class="bi bi-box-arrow-right"></i>
           <span>Logout</span>
         </button>
