@@ -48,35 +48,9 @@
     </div>
     
     {{-- Account --}}
-    <nav class="header-nav ms-auto">
+    <nav class="header-nav ms-auto p-3">
       <ul class="d-flex align-items-center">
-        <li class="nav-item dropdown pe-4">
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <iconify-icon icon="mdi:user-circle" style="color: #000000;" width="30"></iconify-icon>
-            <span class="d-none d-md-block dropdown-toggle ps-1">{{ Auth::user()->name }}</span>
-          </a><!-- End Profile Iamge Icon -->
-          
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>{{ Auth::user()->name }}</h6>
-              <span>{{ Auth::user()->role }}</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li class="dropdown-item d-flex align-items-center justify-content-center">
-              <form action="{{ route('logout') }}" method="post">
-              @csrf
-              <button type="submit" class="border-0 btn w-100">
-                <i class="bi bi-box-arrow-right me-1"></i>
-                Logout
-              </button>
-              </form>
-            </li>
-          </ul><!-- End Profile Dropdown Items -->
-          
-        </li><!-- End Profile Nav -->
-        <i class="bi bi-list toggle-sidebar-btn p-2"></i>
+        <li class="bi bi-list toggle-sidebar-btn p-2"></li>
       </ul>
     </nav><!-- End Icons Navigation -->
 

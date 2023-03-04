@@ -13,7 +13,7 @@
       @endif
       {{-- Add new --}}
       <div class="pb-3">
-        <a href="{{ route('items.create') }}" class="btn btn-primary button-create">Add new item</a>
+        <a href="{{ route('items.create') }}" class="btn btn-success button-create">Add new item</a>
       </div>
       {{-- Table --}}
       @if ($items->count())
@@ -64,7 +64,7 @@
             <td>
               <div class="d-flex justify-content-start gap-2">
                 {{-- edit --}}
-                <a href="{{ route('items.edit', $item) }}" class="btn btn-primary">
+                <a href="{{ route('items.edit', $item) }}" class="btn btn-success">
                   <i class="bi bi-pencil-square"></i>
                 </a>
                 {{-- delete --}}

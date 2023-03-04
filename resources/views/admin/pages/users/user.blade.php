@@ -4,9 +4,9 @@
 @section('content')
   <div class="card recent-sales overflow-auto">
 
-    <div class="card-body mt-4">>
+    <div class="card-body mt-4 ">
 
-      <div class="pb-3">
+      <div class="pb-3 ">
         
         <a href="#" class="btn bg-success text-light button-create">Add Member</a>
       </div>
@@ -61,7 +61,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary button-save" type="submit">Save changes</button>
+              <button type="button" class="btn btn-success button-save" type="submit">Save changes</button>
             </div>
           </div>
         </div>

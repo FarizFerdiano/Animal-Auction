@@ -3,6 +3,14 @@
 
   <ul class="sidebar-nav" id="sidebar-nav">
 
+    <li class="mb-3 fw-medium">
+      <div class="d-flex align-items-center pe-0 text-black">
+        <iconify-icon icon="mdi:user-circle" style="color: #328D2A;" width="30"></iconify-icon>
+        <span class="ms-1 fw-bold">{{ Auth::user()->name }}</span>
+        <div class="badge text-bg-secondary ms-1">{{ Auth::user()->role }}</div>
+      </div>
+    </li>
+
     <li class="nav-item">
       <a class="nav-link {{ (request()->is('admin')) ? '' : 'collapsed' }}" href="{{ route('dashboard') }}">
         <i class="bi bi-grid"></i>
@@ -55,7 +63,7 @@
     <li class="nav-item">
       <form action="{{ route('logout') }}" method="POST">
         @csrf
-        <button type="submit" class="nav-link collapsed border-0 bg-transparent">
+        <button type="submit" class="nav-link collapsed btn-block border-0 bg-transparent">
           <i class="bi bi-box-arrow-right"></i>
           <span>Logout</span>
         </button>
