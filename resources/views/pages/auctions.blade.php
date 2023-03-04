@@ -29,16 +29,18 @@
     <div class="row row-cols-2 justify-content-start g-3 mb-3">
       @foreach ($auctions as $auction)
       <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
-       
         <a class="card shadow-sm w-100 col text-decoration-none text-black" href="/auction/{{ $auction->id }}" title="{{ $auction->item->name }}">
           {{-- Image --}}
           <img src="/assets/item-img/{{ $auction->item->image }}" class="col-md-auto card-img-top" alt="{{ $auction->item->name }}" style="height: 200px; object-fit: cover"/>
-          <div class="card-body flex-column">
-            {{-- Time --}}
-            {{-- <div class="time-auction col-sm badge text-bg-warning text-warning mb-2 fw-bold">
-              <img src="{{ asset('assets/icons/feather_FFB800/clock.svg') }}">
-              <span class="ms-1">1 hari</span>
-            </div> --}}
+          <div class="card-body flex-column pt-1">
+            {{-- Status --}}
+            @switch($auction->status)
+              @case('open')
+                <div class="badge bg-primary fw-normal">Ongoing</div>
+                @break
+              @default
+                <div class="badge bg-danger fw-normal">Closed</div>
+            @endswitch
             {{-- Name --}}
             <p class="text-truncate card-title fw-medium mb-1 fs-5">
               {{ $auction->item->name }}
