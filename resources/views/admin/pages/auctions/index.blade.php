@@ -3,7 +3,7 @@
 @section('content')
 <section class="section dashboard">
     <div class="pb-3">
-        <a href="{{ route('auctions.create') }}" class="btn btn-primary button-create">Start new auction</a>
+        <a href="{{ route('auctions.create') }}" class="btn btn-success button-create">Start new auction</a>
     </div>
 
     @if ($auctions->count())
@@ -18,13 +18,22 @@
               {{-- Status --}}
               @switch($auction->status)
                 @case('open')
-                    <div class="badge bg-warning fw-normal">Ongoing</div>
+                <div class="time-auction col-sm badge text-bg-warning text-light my-2 fw-bold">
+                  <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
+                  <span class="ms-1">Ongoing</span>
+                </div>
                     @break
                 @case('close')
-                    <div class="badge bg-success fw-normal">Closed</div>
+                <div class="time-auction col-sm badge text-bg-secondary text-light my-2 fw-bold">
+                  <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
+                  <span class="ms-1">Closed</span>
+                </div>
                     @break
                 @case('failed')
-                    <div class="badge bg-danger fw-normal">Failed</div>  
+                <div class="time-auction col-sm badge text-bg-danger text-light my-2 fw-bold">
+                  <img src="{{ asset('assets/icons/feather_FFFFFF/clock.svg') }}">
+                  <span class="ms-1">failed</span>
+                </div>  
                     @break
               @endswitch
               {{-- ID --}}
@@ -38,7 +47,7 @@
             </div>
             {{-- Button --}}
             <div class="card-footer p-0">
-              <a href="{{ route('auctions.show', $auction) }}" class="btn btn-sm btn-primary w-100 py-2 fw-semibold">Detail</a>
+              <a href="{{ route('auctions.show', $auction) }}" class="btn btn-sm btn-success w-100 py-2 fw-semibold">Detail</a>
             </div>
           </div>  
         </div>

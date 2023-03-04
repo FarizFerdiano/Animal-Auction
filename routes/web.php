@@ -68,6 +68,3 @@ Route::get('/mybid', [MyBidController::class, 'index']);
 Route::get('/auctions/404', function () {
     return view('pages.auction404');
 });
-
-
-

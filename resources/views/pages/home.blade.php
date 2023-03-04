@@ -114,7 +114,7 @@
               <span class="ms-1">1 hari</span>
             </div> --}}
             {{-- Name --}}
-            <p class="text-truncate card-title fw-medium mb-1 fs-5">
+            <p class="truncate card-title fw-medium mb-1 fs-5">
               {{ $auction->item->name }}
           </p>
           {{-- Current Bid --}}
@@ -124,7 +124,7 @@
                 <img clas="Alert_auction" src="{{ asset('assets/icons/feather_FF1221/tabler_hammer.svg') }}">
                 <span class="ms-1 text-danger">Bid saat ini</span>
               </div>
-              <span class="card-text text-truncate fw-bold fs-5">
+              <span class="card-text truncate fw-bold fs-5">
                 @if ($auction->bid->count())
                   @rupiah($auction->bid->max('bid_amount'))
                   @else

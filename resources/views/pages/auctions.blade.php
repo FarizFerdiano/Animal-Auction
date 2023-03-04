@@ -10,11 +10,11 @@
 
 {{-- Search --}}
 <div class="container">
-  <div class="card border-warning p-1 my-3 mb-4">
+  <div class="card border-success p-1 my-3 mb-4">
   <form action="" method="post" class="d-flex">
       @csrf
-      <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-warning d-flex text-white" type="submit">
+      <input class="form-control me-2" type="text" placeholder="Cari Hewan lelang yang anda inginkan" aria-label="Search">
+      <button class="btn btn-success d-flex text-white" type="submit">
           <img src="{{ asset('assets/icons/feather_FFFFFF/search.svg') }}">
       <span class="ms-1">Search</span>
       </button>
@@ -36,13 +36,20 @@
             {{-- Status --}}
             @switch($auction->status)
               @case('open')
-                <div class="badge bg-primary fw-normal">Ongoing</div>
+              <div class="time-auction col-sm badge text-bg-warning text-warning my-2 fw-bold">
+                <img src="{{ asset('assets/icons/feather_FFB800/clock.svg') }}">
+                <span class="ms-1">Ongoing</span>
+              </div>
                 @break
               @default
+              <div class="time-auction col-sm badge text-bg-danger text-danger my-2 fw-bold">
+                <img src="{{ asset('assets/icons/feather_FF1221/mingcute_auction.svg') }}">
+                <span class="ms-1">Closed</span>
+              </div>
                 <div class="badge bg-danger fw-normal">Closed</div>
             @endswitch
             {{-- Name --}}
-            <p class="text-truncate card-title fw-medium mb-1 fs-5">
+            <p class="truncate card-title fw-medium mb-1 fs-5">
               {{ $auction->item->name }}
             </p>
             {{-- Current Bid --}}
