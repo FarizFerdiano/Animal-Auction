@@ -43,7 +43,7 @@
     <!-- End Logo -->
     <div class="d-flex align-items-center justify-content-between">
       <a href="/" class="logo d-flex align-items-center">
-        <img src="/assets/img/Logo_Animal_2.png" alt="AnimalAuction">
+        <img src="/assets/img/Logo_Animal_Auction.png" alt="AnimalAuction">
       </a>
     </div>
     
