@@ -88,7 +88,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      
       {{-- <h1>Dashboard</h1> --}}
       <h1>{{ $title }}</h1>
       {{-- <nav>
