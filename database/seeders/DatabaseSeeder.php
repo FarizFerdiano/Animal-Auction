@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             UserSeeder::class,
-            AdminSeeder::class,
+            // AdminSeeder::class,
         ]);
 
         Item::factory(100)->create();
