@@ -47,8 +47,7 @@
                 <input type="number" placeholder="Enter your bid amount" class="form-control">
                 <button type="submit" class="btn btn-success text-light fw-semibold">Submit Bid</button>
                 @else
-                <input type="number" placeholder="You can't join this auction" class="form-control text-center" disabled>
-                <button type="submit" class="btn btn-success text-light fw-semibold" disabled>Submit Bid</button>
+                <input type="number" placeholder="You're not allowed to join this auction" class="form-control text-center" disabled>                <button type="submit" class="btn btn-success text-light fw-semibold" disabled>Submit Bid</button>
                 @endcan
               @else
                 <input type="number" placeholder="You need to login first" class="form-control text-center" disabled>
@@ -75,7 +74,7 @@
                   <tr>
                     <th scope="col" style="width: 7.5%">#</th>
                     <th scope="col" style="width: 30%">Bidder</th>
-                    <th scope="col" style="width: 25%">Bid Amount</th>
+                    <th scope="col" style="width: 30%">Bid Amount</th>
                     <th scope="col"> Bid Time</th>
                   </tr>
                 </thead>
