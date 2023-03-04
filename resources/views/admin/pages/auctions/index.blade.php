@@ -33,7 +33,12 @@
                 alt="{{ $auction->item->name }}"
                 style="height: 200px; object-fit: cover"/>
           <div class="card-body flex-column p-2 pt-1">
-            {{-- Status --}}
+
+          {{-- ID --}}
+          <p class="fw-semibold mb-0" style="font-size: 12px">
+            ID {{ $auction->id }}
+          </p>
+          {{-- Status --}}
             @switch($auction->status)
             @case('open')
               <div class="time-auction col-sm badge text-bg-warning text-light my-2 fw-bold">
@@ -54,24 +59,20 @@
               </div>    
                   @break
             @endswitch
-            {{-- ID --}}
-            <p class="fw-semibold mb-0" style="font-size: 12px">
-              ID {{ $auction->id }}
-            </p>
             {{-- Name --}}
             <p class="fw-medium mb-0 truncate" style="height: 48px" title="{{ $auction->item->name }}">
               {{ $auction->item->name }}
             </p>
-            {{-- Detail --}}
+            {{-- Button --}}
             <a href="{{ route('auctions.show', $auction) }}" class="btn btn-sm btn-success w-100 mt-1 fw-semibold">Detail</a>
           </div>
         </div>  
       </div>
       @endforeach
     </div>
-    <div class="me-5 mt-0">
+    {{-- <div class="me-5 mt-0">
       {{ $auctions->links() }}
-    </div>
+    </div> --}}
   @else
     <p class="text-center fs-3 my-5">No auction found.</p>
   @endif

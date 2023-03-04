@@ -7,7 +7,7 @@
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>{{ $title }} - Animal Auction</title>
+  <title>{{ $title }} | Animal Auction</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 

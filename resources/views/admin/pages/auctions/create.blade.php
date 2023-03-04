@@ -52,7 +52,7 @@
         </tbody>
       </table>
     </div>
-    {{-- Pagination --}}
+    Pagination
     <div class="card-footer border-top-0 pt-0 mx-2">
       {{ $items->links() }}
     </div>

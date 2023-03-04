@@ -6,17 +6,41 @@
   <div class="container">
     <div class="card my-5 border-0 ">
       <div class="row g-4 p-1">
+
         {{-- img --}}
-        <div class="col-md-5 pe-4">
+        {{-- <div class="col-md-5 pe-4">
           <img src="/assets/item-img/{{ $auction->item->image }}" class=" col-md-auto rounded w-100" alt="{{ $auction->item->image }}" style="height: 516px; object-fit: cover">
+        </div> --}}
+
+        <div class="col-10 col-md-5 pe-4 mx-auto">
+          <div class="w-100 ratio ratio-1x1 overflow-hidden rounded-3">
+              <div class="w-100">
+                  <img src="/assets/item-img/{{ $auction->item->image }}" alt="{{ $auction->item->image }}" class="h-100">
+              </div>
+          </div>
         </div>
+
         {{-- Info --}}
         <div class="col d-flex">
           <div class="card-body p-0">
-            <h5 class="card-title fw-bold fs-3 mb-3">{{ $auction->item->name }}</h5>
-            {{-- <div class="time-auction  badge text-bg-warning text-warning mb-2 fw-bold mb-2"> <img src="{{ asset('assets/icons/feather_FFB800/clock.svg') }}">
-              <span class="ms-1">1 hari</span>
-            </div> --}}
+            <h5 class="card-title fw-bold fs-3 mb-2">{{ $auction->item->name }}</h5>
+
+            {{-- Status --}}
+            @switch($auction->status)
+              @case('open')
+              <div class="time-auction col-sm badge text-bg-warning text-warning my-2 fw-bold">
+                <img src="{{ asset('assets/icons/feather_FFB800/clock.svg') }}">
+                <span class="ms-1">Ongoing</span>
+              </div>
+                @break
+              @default
+              <div class="time-auction col-sm badge text-bg-danger text-danger my-2 fw-bold">
+                <img src="{{ asset('assets/icons/feather_FF1221/mingcute_auction.svg') }}">
+                <span class="ms-1">Closed</span>
+              </div>
+            @endswitch
+
+            {{-- Current bid --}}
             <div class="fw-bold"><img clas="waktu_auction mb-2" src="{{ asset('assets/icons/feather_FF1221/tabler_hammer.svg') }}">
               <span class="ms-1 text-danger">Bid saat ini</span>
             </div>
@@ -27,10 +51,6 @@
                 @rupiah($auction->item->start_price)
               @endif
             </p>
-            {{-- <div class="fw-bold mb-2"> 
-              <img clas="" src="{{ asset('assets/icons/feather_328D2A/user icon.svg') }}">
-              <span class="ms-1">Nama Pemilik</span>
-            </div> --}}
             <p class="fw-semibold mb-2">ID {{ $auction->id }}</p>
             <p class="fw-semibold mb-1 fs-6">Description</p>
             <p class="">{{ $auction->item->description }}</p>
