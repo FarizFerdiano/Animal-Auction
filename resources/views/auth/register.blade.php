@@ -10,43 +10,55 @@
   </div>
     
   {{-- <!-- Register card --> --}}
-  <section class="d-flex justify-content-center">
-        <div class="col-lg-6 mb-1">
+  <section class="row justify-content-center px-4 py-2">
+        <div class="col-md-8 col-lg-5">
           <div class="card shadow-sm mb-5">
             <div class="card-body">
               <form action="{{ route('register') }}" method="POST">
                 @csrf
-                {{-- <!-- Name input --> --}}
-                <div class="form-floating mb-2">
-                  <input type="text" class="form-control" id="floatingInput" name="name" placeholder="name">
-                  <label for="floatingInput">Name</label>
+                  {{-- <!-- Name input --> --}}
+                  <div class="form-floating mb-2">
+                    <input type="text" class="form-control" id="floatingInput" name="name" placeholder="name">
+                    <label class="form-label" for="name">Name<span class="text-danger">*</span></label>
+                    @error('name')
+                  </div>
+                  <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
+                  @enderror
                 </div>
-                <p class="small mt-1 pt-1 fw-regular text-muted"><img src="{{ asset('assets/icons/feather_BBBBBB/alert-circle.svg') }}"> Masukan nama asli anda </p>
-  
                 {{-- <!-- Username input --> --}}
                 <div class="form-floating mb-2">
-                  <input type="text" class="form-control" id="floatingInput" name="username" placeholder="username">
-                  <label for="floatingInput">Username</label>
-                </div>
-                <p class="small mt-1 pt-1 fw-regular text-muted"><img src="{{ asset('assets/icons/feather_BBBBBB/alert-circle.svg') }}"> Masukan username</p>
-  
-                {{-- <!-- Notlpn input --> --}}
-                <div class="form-floating mb-2">
-                  <input type="number" class="form-control" id="floatingInput" name="phone" placeholder="nomertlp">
-                  <label for="floatingInput">Nomer Telepone</label>
-                </div>
-                <p class="small mt-1 pt-1 fw-regular text-muted"><img src="{{ asset('assets/icons/feather_BBBBBB/alert-circle.svg') }}"> Masukan no telepone</p>
-  
-  
+                  <input type="text" name="username" id="username" class="form-control @error('username') is-invalid @enderror" value="{{ old('username') }}" placeholder="Enter username"/>
+                  <label class="form-label" for="username">Username<span class="text-danger">*</span></label>
+                  @error('username')
+                  <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>  
                 {{-- <!-- Password input --> --}}
                 <div class="form-floating mb-2">
-                  <input type="password" class="form-control" id="floatingInput" name="password" placeholder="password">
-                  <label for="floatingInput">Password</label>
+                  <input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" placeholder="Enter password"/>
+                  <label class="form-label" for="password">Password<span class="text-danger">*</span></label>
+                  @error('password')
+                  <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>  
+                {{-- Phone input --}}
+                <div class="form-floating mb-2">
+                  <input type="number" name="phone" id="phone" class="form-control  @error('phone') is-invalid @enderror" value="{{ old('phone') }}" placeholder="Enter phone number"/>
+                  <label class="form-label" for="phone">Phone Number</label>
+                  @error('phone')
+                  <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
+                  @enderror
                 </div>
-                <p class="small mt-1 pt-1 fw-regular text-muted"><img src="{{ asset('assets/icons/feather_BBBBBB/alert-circle.svg') }}"> Masukan password dengan benar </p>
-  
-                
-                {{-- <!-- Submit & back button --> --}}
+
+                {{-- <!-- Buttons --> --}}
                 <div class="container p-0">
                   <div class="d-flex w-100 gap-2 flex-column flex-md-row">
                       <button type="submit" class="col-12 col-md-6 btn btn-success btn-block text-light py-3 fw-bold">Sign up <img src="{{ asset('assets/icons/feather_white/log-in.svg') }}"></button>
