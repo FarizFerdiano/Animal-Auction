@@ -117,7 +117,7 @@
                   {{-- Close --}}
                   @case('open')
                     <input type="hidden" name="status" value="open">
-                    <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure want to close this auction? After closing, this auction cannot receive any bids.')">                      <i class="bi bi-x-lg"></i>
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure want to close this auction? After closing, this auction cannot receive any bids.')">                      <i class="bi bi-x-lg"></i>
                       Close
                     </button>
                     @break

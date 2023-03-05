@@ -96,7 +96,7 @@
                           <label for="floatingInput">Password</label>
                       </div>
                       <p class="small mt-1 pt-1 fw-regular text-muted"><img
-                              src="{{ asset('assets/icons/feather_BBBBBB/alert-circle.svg') }}"> Password menggunakan huruf kapital </p>
+                              src="{{ asset('assets/icons/feather_BBBBBB/alert-circle.svg') }}"> Masukan passowrd dengan benar</p>
   
                       {{-- <!-- Login & Sign button --> --}}
                       <div class="container p-0">

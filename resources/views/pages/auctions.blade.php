@@ -3,8 +3,8 @@
 @section('app')
 
 <div class="container p-0">
-  <div class="Headline_home text-light d-flex justify-content text-align-left py-3 px-2">
-    <h1 class="H1_ijo">All Auctions</h1>
+  <div class="Headline_home text-light d-flex justify-content text-align-left pt-3 px-2">
+    <h1 class="H1_ijo">Semua Lelang</h1>
 </div>
 </div>
 
@@ -38,13 +38,13 @@
               @case('open')
               <div class="time-auction col-sm badge text-bg-warning text-warning my-2 fw-bold">
                 <img src="{{ asset('assets/icons/feather_FFB800/clock.svg') }}">
-                <span class="ms-1">Ongoing</span>
+                <span class="ms-1">Berlangsung</span>
               </div>
                 @break
               @default
               <div class="time-auction col-sm badge text-bg-danger text-danger my-2 fw-bold">
                 <img src="{{ asset('assets/icons/feather_FF1221/mingcute_auction.svg') }}">
-                <span class="ms-1">Closed</span>
+                <span class="ms-1">Berakhir</span>
               </div>
             @endswitch
             {{-- Name --}}
@@ -76,6 +76,6 @@
   </div>
 </section>
 @else
-  <p class="text-center fs-3 my-5">No auction found.</p>
+  <p class="text-center fs-4 my-5">Tidak ada lelang yang ditemukan.</p>
 @endif
 @endsection 

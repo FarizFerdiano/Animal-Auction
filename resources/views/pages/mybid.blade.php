@@ -21,16 +21,15 @@
 
             {{-- Table --}}
             <div class="container">
-
-                <div class="card shadow-sm">
+                <div class="card shadow-sm p-2">
                     <div div class="table-responsive">
                         <table class="table caption-top align-middle">
-                            <h5 class="fw-semibold fs-3 ms-3 my-3">My Bid</h5>
+                            <h5 class="fw-semibold fs-3 ms-2 my-3">My Bid</h5>
                         @if ($bids->count())
                             <thead>
                                 <tr>
-                                    <th class="fw-semibold" style="width: 7.5%">ID</th>
-                                    <th class="fw-semibold" style="width: ">Auction</th>
+                                    <th class="fw-semibold" style="width: 4%">ID</th>
+                                    <th class="fw-semibold" style="width: 50%">Auction</th>
                                     <th class="fw-semibold" style="width: 15%">Bid Amount</th>
                                     <th class="fw-semibold" style="width: 20%">Bid Time</th>
                                     <th class="fw-semibold" style="width: 15%">Result</th>
@@ -56,19 +55,22 @@
                                         @case('ongoing')
                                             <div class="time-auction col-sm badge text-bg-warning text-warning my-2 fw-bold">
                                                 <img src="{{ asset('assets/icons/feather_FFB800/clock.svg') }}">
-                                                <span class="ms-1">Ongoing</span>
+                                                <span class="ms-1">Berlangsung</span>
                                             </div>
                                             @break
                                         @case('win')
                                             <div class="time-auction col-sm badge text-bg-success text-success my-2 fw-bold">
                                                 <img src="{{ asset('assets/icons/feather_20_328D2A/mingcute_auction.svg') }}">
-                                                <span class="ms-1">Win</span>
+                                                <span class="ms-1">Menang</span>
                                             </div>
+                                            <a href="https://wa.me/6288291045794" class="btn btn-sm btn-outline-dark fs-6">
+                                                Hubungi petugas
+                                            </a>
                                             @break
                                         @case('lose')
                                         <div class="time-auction col-sm badge text-bg-danger text-danger my-2 fw-bold">
                                             <img src="{{ asset('assets/icons/feather_FF1221/mingcute_auction.svg') }}">
-                                            <span class="ms-1">Lose</span>
+                                            <span class="ms-1">Kalah</span>
                                           </div>
                                         @break
                                         @endswitch
@@ -77,7 +79,7 @@
                                 @endforeach
                             </tbody>
                         @else
-                        <p class="text-center fw-medium fs-3 mt-3 mb-4">No bids found.</p>
+                        <p class="text-center fw-medium fs-4 mt-3 mb-4">Tidak ada tawaran yang ditemukan.</p>
                         @endif
                         </table>
                     </div>

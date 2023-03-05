@@ -33,11 +33,13 @@
 <div class="container p-0">
   <div class="d-flex justify-content-between align-items-center px-3 ">
     <div class="Headline_home d-flex justify-content text-align-left py-3">
-      <h2 class="text-start H1_ijo">Hewan yang di lelang</h2>
+      <h2 class="text-start H1_ijo">
+        Hewan yang di lelang
+      </h2>
     </div>
     <div class="browese">
-      <a href="auctions" class="btn btn-outline-success btn-block fw-bold">
-        Browse More<img src="">
+      <a href="auctions" class="btn btn-outline-success btn-sm fw-medium">
+        Lihat selengkapnya
       </a>
     </div>
   </div>
@@ -50,7 +52,9 @@
       <div class="card shadow-sm">
         <img src="{{ asset('assets/img/tipe_img_01.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-title text-center">Ikan</p>
+          <p class="card-title text-center">
+            Ikan
+          </p>
       </div>
     </div>
   </div>
@@ -58,7 +62,9 @@
       <div class="card shadow-sm">
         <img src="{{ asset('assets/img/tipe_img_02.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-title text-center">Burung</p>
+          <p class="card-title text-center">
+            Burung
+          </p>
       </div>
     </div>
   </div>
@@ -66,7 +72,9 @@
       <div class="card shadow-sm">
         <img src="{{ asset('assets/img/tipe_img_03.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-title text-center">Mamalia</p>
+          <p class="card-title text-center">
+            Mamalia
+          </p>
       </div>
     </div>
   </div>
@@ -74,33 +82,24 @@
       <div class="card shadow-sm">
         <img src="{{ asset('assets/img/tipe_img_04.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-title text-center">Reptil</p>
-      </div>
-    </div>
-  </div>
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="{{ asset('assets/img/tipe_img_05.png') }}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-title text-center">Ternak</p>
+          <p class="card-title text-center">
+            Reptil
+          </p>
       </div>
     </div>
   </div>
   </div>
 </div>
 {{-- End Jenis Hewan --}}
-
-
-
 {{-- Cards --}}
 @if ($auctions->count())
 <section>
   <div class="container">
-    
     <div class="Headline_home mb-4">
-      <h2 class="text-start H1_ijo">Lelang yang berlangsung</h2>
+      <h2 class="text-start H1_ijo">
+        Lelang yang berlangsung
+      </h2>
     </div>
-
     <div class="row row-cols-2 justify-content-start g-3 mb-5">
       @foreach ($auctions as $auction)
       <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
@@ -113,15 +112,18 @@
              @case('open')
              <div class="time-auction col-sm badge text-bg-warning text-warning my-2 fw-bold">
                <img src="{{ asset('assets/icons/feather_FFB800/clock.svg') }}">
-               <span class="ms-1">Ongoing</span>
+               <span class="ms-1">
+                Berlangsung
+              </span>
              </div>
                @break
              @default
              <div class="time-auction col-sm badge text-bg-danger text-danger my-2 fw-bold">
                <img src="{{ asset('assets/icons/feather_FF1221/mingcute_auction.svg') }}">
-               <span class="ms-1">Closed</span>
+               <span class="ms-1">
+                Berakhir
+              </span>
              </div>
-               <div class="badge bg-danger fw-normal">Closed</div>
            @endswitch
             {{-- Name --}}
             <p class="truncate card-title fw-medium mb-1 fs-5">
@@ -132,7 +134,9 @@
             <div class="col">
               <div class="col-sm fw-bold">
                 <img clas="Alert_auction" src="{{ asset('assets/icons/feather_FF1221/tabler_hammer.svg') }}">
-                <span class="ms-1 text-danger">Bid saat ini</span>
+                <span class="ms-1 text-danger">
+                  Bid saat ini
+                </span>
               </div>
               <span class="card-text truncate fw-bold fs-5">
                 @if ($auction->bid->count())
@@ -151,7 +155,7 @@
   </div>
 </section>
 @else
-<p class="text-center fs-3 my-5">No auction found.</p>
+<p class="text-center fs-4 my-5">Tidak lelang yang ditemukan.</p>
 @endif
 
 

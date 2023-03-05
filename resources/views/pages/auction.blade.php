@@ -12,7 +12,7 @@
           <img src="/assets/item-img/{{ $auction->item->image }}" class=" col-md-auto rounded w-100" alt="{{ $auction->item->image }}" style="height: 516px; object-fit: cover">
         </div> --}}
 
-        <div class="col-10 col-md-5 pe-4 mx-auto">
+        <div class="col-md-5 col-md-5 pe-4 mx-auto">
           <div class="w-100 ratio ratio-1x1 overflow-hidden rounded-3">
               <div class="w-100">
                   <img src="/assets/item-img/{{ $auction->item->image }}" alt="{{ $auction->item->image }}" class="h-100">
@@ -30,13 +30,13 @@
               @case('open')
               <div class="time-auction col-sm badge text-bg-warning text-warning my-2 fw-bold">
                 <img src="{{ asset('assets/icons/feather_FFB800/clock.svg') }}">
-                <span class="ms-1">Ongoing</span>
+                <span class="ms-1">Berlangsung</span>
               </div>
                 @break
               @default
               <div class="time-auction col-sm badge text-bg-danger text-danger my-2 fw-bold">
                 <img src="{{ asset('assets/icons/feather_FF1221/mingcute_auction.svg') }}">
-                <span class="ms-1">Closed</span>
+                <span class="ms-1">Berakhir</span>
               </div>
             @endswitch
 
@@ -44,9 +44,9 @@
             <div class="fw-bold"><img clas="waktu_auction mb-2" src="{{ asset('assets/icons/feather_FF1221/tabler_hammer.svg') }}">
               <span class="ms-1 text-danger">
                 @if($auction->status == 'open')
-                Current Bid
+                Bid saat ini
                 @else
-                Final Bid
+                Bid Terakhir
                 @endif
               </span>
             </div>
@@ -57,15 +57,15 @@
                 @rupiah($auction->item->start_price)
               @endif
             </p>
-            <p class="fw-semibold mb-2">ID {{ $auction->id }}</p>
-            <p class="fw-semibold mb-1 fs-6">Description</p>
+            {{-- <p class="fw-semibold mb-2">ID {{ $auction->id }}</p> --}}
+            <p class="fw-semibold mb-1 fs-6">Deskripsi</p>
             <p class="">{{ $auction->item->description }}</p>
 
             {{-- Submit Bid --}}
             <hr>
             @switch($auction->status)
             @case('open')
-              <h5 class="fw-semibold fs-3 mb-3">Bid Now</h5>
+              <h5 class="fw-semibold fs-3 mb-3">Tawar sekarang</h5>
               {{-- Alert --}}
               @if (session()->has('success'))
               <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -86,27 +86,35 @@
                   <span class="input-group-text">Rp</span>
                 @auth
                   @can('Member')
-                  <input type="number" name="bid_amount" placeholder="Enter your bid amount" class="form-control">
+                  <input type="number" name="bid_amount" placeholder="Masukkan jumlah tawaran Anda" class="form-control">
                   <button type="submit" class="btn btn-success text-light fw-semibold" value="{{ old('bid_amount') }}">Submit Bid</button>
                   @else
-                  <input type="number" name="bid_amount" placeholder="You're not allowed to join this auction" class="form-control text-center" disabled><button type="submit" class="btn btn-success text-light fw-semibold" disabled>Submit Bid</button>
+                  <input type="number" name="bid_amount" placeholder="Anda tidak diizinkan untuk mengikuti lelang ini" class="form-control text-center" disabled><button type="submit" class="btn btn-success text-light fw-semibold" disabled>Submit Bid</button>
                   @endcan
                 @else
-                <input type="number" name="bid_amount" placeholder="You need to login first" class="form-control text-center" disabled>
+                <input type="number" name="bid_amount" placeholder="Anda harus login terlebih dahulu" class="form-control text-center" disabled>
                 @endauth
                 </div>
               </form>
               @break
             @case('failed')
-              <h5 class="fw-semibold fs-3 mb-3">Winner</h5>
-              <p class="fs-5 fst-italic">No one wins</p>
+              <h5 class="fw-semibold fs-3 mb-3">Pemenang</h5>
+              <p class="fs-5 fst-italic">Tidak ada satu pun yang menang</p>
               @break
             @case('close')
-              <h5 class="fw-semibold fs-3 mb-2">Winner</h5>
-              <span class="fs-4">
-                <i class="bi bi-person-circle"></i>
-                {{ $bids->first()->user->name }}
-              </span>
+              <h5 class="fw-semibold fs-3 mb-2">Pemenang</h5>
+              <div class="card text-bg-warning border-warning mb-3" style="max-width: 60rem;">
+                <div class="card-body">
+                  <span class="fs-4 fw-medium">
+                    <i class="bi bi-trophy"></i>
+                    {{ $bids->first()->user->name }}
+                  </span>
+                  <p class="card-text fw-light mt-2">
+                    Lelang dinyatakan selesai dan kepada saudara yang memenangkan lelang diperkenankan langsung menghubungi petugas.
+                  </p>
+                  <a href="https://wa.me/6288291045794" class="btn btn-outline-dark">Hubungi petugas</a>
+                </div>
+              </div>
               @break
           @endswitch
           </div>
@@ -143,7 +151,7 @@
                   @endforeach
                 </tbody>
                 @else
-                <p class="text-center fw-medium fs-3 mt-3 mb-4">No bids in this auction yet</p>
+                <p class="text-center fw-medium fs-4 mt-3 mb-4">Belum ada penawaran dalam lelang ini</p>
                 @endif
               </table>
             </div>

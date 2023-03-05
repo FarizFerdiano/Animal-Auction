@@ -49,8 +49,8 @@
               <a href="/mybid" class="mybid_button btn btn-warning text-bg-warning btn-block text-warning  fw-bold">
                   <img src="{{ asset('assets/icons/feather_E88D13/coin-stack.svg') }}"><span class="ms-2">My Bid</span>
               </a>
-        @else
-          <a href="{{ route('login') }}" class="btn btn-success"><img src="{{ asset('assets/icons/feather_FFFFFF/log-in.svg') }}"><span class="ms-1">Login</span></a>
+            @else
+          <a href="{{ route('login') }}" class="btn btn-success"><span class="ms-1">Login<img src="{{ asset('assets/icons/feather_FFFFFF/log-in.svg') }}"></span></a>
         @endauth
     </div>
 

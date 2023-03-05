@@ -47,6 +47,6 @@ class AuctionController extends Controller
         ]);
 
         return redirect()->route('auction-show', $auction)
-                        ->with('success' , 'Bid submitted successfully.');
+                        ->with('success' , 'Tawaran berhasil diajukan.');
     }
 }

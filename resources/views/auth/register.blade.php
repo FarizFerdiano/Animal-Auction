@@ -43,7 +43,7 @@
                   <input type="password" class="form-control" id="floatingInput" name="password" placeholder="password">
                   <label for="floatingInput">Password</label>
                 </div>
-                <p class="small mt-1 pt-1 fw-regular text-muted"><img src="{{ asset('assets/icons/feather_BBBBBB/alert-circle.svg') }}"> Password menggunakan huruf kapital </p>
+                <p class="small mt-1 pt-1 fw-regular text-muted"><img src="{{ asset('assets/icons/feather_BBBBBB/alert-circle.svg') }}"> Masukan password dengan benar </p>
   
                 
                 {{-- <!-- Submit & back button --> --}}
