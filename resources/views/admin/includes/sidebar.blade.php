@@ -41,7 +41,6 @@
       </a>
     </li>
 
-    
     <li class="nav-heading">Auctions</li>
     @can('Staff')
     <li class="nav-item">
@@ -52,7 +51,7 @@
     </li>
     @endcan
     <li class="nav-item">
-      <a class="nav-link {{ (request()->is('admin/report', 'admin/report/*')) ? '' : 'collapsed' }}" href="#">
+      <a class="nav-link {{ (request()->is('admin/report', 'admin/report/*')) ? '' : 'collapsed' }}" href="{{ route('pdf-auction') }}">
         <i class="bi bi-printer"></i>
         <span>Generate Report</span>
       </a>
