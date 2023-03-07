@@ -51,8 +51,7 @@
     </li>
     @endcan
     <li class="nav-item">
-      <a class="nav-link {{ (request()->is('admin/report', 'admin/report/*')) ? '' : 'collapsed' }}" href="{{ route('pdf-auction') }}">
-        <i class="bi bi-printer"></i>
+      <a class="nav-link {{ (request()->is('admin/report', 'admin/report/*')) ? '' : 'collapsed' }}" href="{{ route('report.index') }}">        <i class="bi bi-printer"></i>
         <span>Generate Report</span>
       </a>
     </li>
