@@ -4,7 +4,6 @@
       <meta charset="utf-8">
       <title>Auction Report</title>
       <style>
-          /* Your styles here */
           
           body {
               background-image: url('assets/img/Cap.png');
@@ -81,25 +80,22 @@
             @foreach ($bids as $bid)
             <tr>
                 <td>{{ $loop->iteration }}</td>
-                <td>{{ $bids[0]->user->name }}</td>
-                <td>@rupiah($bids[0]->bid_amount)</td>
-                <td>{{ $bids[0]->created_at }}</td>
+                <td>{{ $bid->user->name }}</td>
+                <td>@rupiah($bid->bid_amount)</td>
+                <td>{{ $bid->created_at }}</td>
                 <td>
-                    @switch($bid->result)
-                      @case('win')
-                        <span style="color: green; font-weight: bold">Win</span>
-                        @break
-                      @case('lose')
-                        <span style="color: red; font-weight: bold">Lose</span>
-                        @break
-                    @endswitch
-                  </td>
+                  @switch($bid->result)
+                    @case('win')
+                      <span style="color: green; font-weight: bold">Win</span>
+                      @break
+                    @case('lose')
+                      <span style="color: red; font-weight: bold">Lose</span>
+                      @break
+                  @endswitch
+                </td>
             </tr>
             @endforeach
         </tbody>
     </table>
-  {{-- <div class="Cap">
-    <img src="data:image/png;base64, {{ base64_encode(file_get_contents(public_path('assets/img/Cap.png'))) }}" alt="">
-  </div> --}}
   </body>
 </html>
