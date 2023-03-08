@@ -5,7 +5,10 @@
       <title>Auction Report</title>
       <style>
           /* Your styles here */
+          
           body {
+              background-image: url('assets/img/Cap.png');
+              background-repeat:no-repeat;
               font-family: sans-serif;
               font-size: 12px;
           }
@@ -95,5 +98,8 @@
             @endforeach
         </tbody>
     </table>
+  {{-- <div class="Cap">
+    <img src="data:image/png;base64, {{ base64_encode(file_get_contents(public_path('assets/img/Cap.png'))) }}" alt="">
+  </div> --}}
   </body>
 </html>
