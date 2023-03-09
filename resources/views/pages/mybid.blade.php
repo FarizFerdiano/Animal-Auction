@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row d-flex mb-5">
             {{-- Search --}}
-            <div class="container">
+            {{-- <div class="container">
                 <div class="card bg-warning-subtle border-warning p-1 my-3 mb-4 shadow-sm">
                   <form class="d-flex" role="search">
                       <input class="form-control me-2" type="search" placeholder="Cari Bid anda" aria-label="Search">
@@ -17,11 +17,11 @@
                       </a>
                   </form>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Table --}}
             <div class="container">
-                <div class="card shadow-sm p-2">
+                <div class="card shadow-sm  mt-3 p-2">
                     <div div class="table-responsive">
                         <table class="table caption-top align-middle">
                             <h5 class="fw-semibold fs-3 ms-2 my-3">My Bid</h5>

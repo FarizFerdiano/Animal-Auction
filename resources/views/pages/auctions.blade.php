@@ -71,11 +71,13 @@
         </a>  
       </div>
       @endforeach
+      @else
+      
+        {{-- <p class="text-center fs-4 my-5">Tidak ada lelang yang ditemukan.</p> --}}
+        <img class="img-fluid mx-auto d-block" src="{{ asset('assets/img/ups_lelang.png') }}" alt="Tidak ada lelang yang ditemukan">
     </div>
     {{ $auctions->links() }}
   </div>
 </section>
-@else
-  <p class="text-center fs-4 my-5">Tidak ada lelang yang ditemukan.</p>
 @endif
 @endsection 
