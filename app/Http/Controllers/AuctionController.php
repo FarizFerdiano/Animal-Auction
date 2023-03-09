@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Auction;
 use App\Models\Bid;
+use App\Models\Item;
 
 class AuctionController extends Controller
 {
@@ -48,5 +49,21 @@ class AuctionController extends Controller
 
         return redirect()->route('auction-show', $auction)
                         ->with('success' , 'Tawaran berhasil diajukan.');
+    }
+
+    public function search(Request $request) {
+        if ($request->has('search')) {
+            $items = Item::where('name', 'LIKE', '%'.$request->input('search').'%')->get();
+            $items_id = $items->pluck('id')->toArray();
+            $auctions = Auction::latest()->whereIn('item_id',$items_id)->paginate(24);
+        }
+        else {
+            $auctions = Auction::latest()->paginate(24);
+        }
+
+        return view('pages.auctions',[
+            'auctions' => $auctions,
+            'title' => 'All Auctions',
+        ]);
     }
 }

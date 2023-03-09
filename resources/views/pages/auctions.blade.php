@@ -7,13 +7,13 @@
     <h1 class="H1_ijo">Semua Lelang</h1>
 </div>
 </div>
-
+{{-- {{ dd($auctions) }} --}}
 {{-- Search --}}
 <div class="container">
   <div class="card border-success p-1 my-3 mb-4">
-  <form action="" method="post" class="d-flex">
+  <form action="/auctions/search" method="GET" class="d-flex">
       @csrf
-      <input class="form-control me-2" type="text" placeholder="Cari Hewan lelang yang anda inginkan" aria-label="Search">
+      <input type="search" name="search" class="form-control me-2" type="text" placeholder="Cari Hewan lelang yang anda inginkan" aria-label="Search">
       <button class="btn btn-success d-flex text-white" type="submit">
           <img src="{{ asset('assets/icons/feather_FFFFFF/search.svg') }}">
       <span class="ms-1">Search</span>

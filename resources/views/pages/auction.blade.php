@@ -112,7 +112,7 @@
                   <p class="card-text fw-light mt-2">
                     Lelang dinyatakan selesai dan kepada saudara yang memenangkan lelang diperkenankan langsung menghubungi petugas.
                   </p>
-                  <a href="https://wa.me/6288291045794" class="btn btn-outline-dark">Hubungi petugas</a>
+                  {{-- <a href="https://wa.me/6288291045794" class="btn btn-outline-dark">Hubungi petugas</a> --}}
                 </div>
               </div>
               @break

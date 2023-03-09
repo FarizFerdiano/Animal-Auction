@@ -64,6 +64,8 @@ Route::get('/auctions', [AuctionController::class, 'index']);
 Route::get('/auction/{auction}', [AuctionController::class, 'show'])->name('auction-show');
 Route::post('/auction/{auction}', [AuctionController::class, 'store'])->name('auction-store');
 Route::get('/mybid', [MyBidController::class, 'index'])->middleware('auth');
+Route::get('/auctions/search', [AuctionController::class, 'search']);
+
 
 Route::get('/auctions/404', function () {
     return view('pages.auction404');    
