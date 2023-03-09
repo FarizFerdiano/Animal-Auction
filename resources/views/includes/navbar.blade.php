@@ -45,10 +45,17 @@
                       </li>
                   </ul>
               </div>
+              @can('Member')
               {{-- Mybid Button --}}
               <a href="/mybid" class="mybid_button btn btn-warning text-bg-warning btn-block text-warning  fw-bold">
                   <img src="{{ asset('assets/icons/feather_E88D13/coin-stack.svg') }}"><span class="ms-2">My Bid</span>
               </a>
+              @else
+              {{-- Dash Button --}}
+              <a href="/admin" class="Dash_button btn btn-success text-bg-success btn-block text-success  fw-bold">
+                <img src="{{ asset('assets/icons/feather_328D2A/server.svg') }}"><span class="ms-2">Dashboard</span>
+              </a>
+              @endcan
             @else
           <a href="{{ route('login') }}" class="btn btn-success"><span class="ms-1">Login<img src="{{ asset('assets/icons/feather_FFFFFF/log-in.svg') }}"></span></a>
         @endauth

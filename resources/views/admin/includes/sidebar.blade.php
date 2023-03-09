@@ -10,11 +10,19 @@
         <div class="badge text-bg-secondary ms-1">{{ Auth::user()->role }}</div>
       </div>
     </li>
-
+    
+    
     <li class="nav-item">
       <a class="nav-link {{ (request()->is('admin')) ? '' : 'collapsed' }}" href="{{ route('dashboard') }}">
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
+      </a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="/">
+        <i class="bi bi-house"></i>
+        <span>Home</span>
       </a>
     </li>
 
